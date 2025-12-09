@@ -8,97 +8,111 @@
    
 </head>
 <body>
-    <div class="container text-center">
-        <div class="row">
-            <div class="col" style="padding:0;">
-                <img id="myImg" src="https://picsum.photos/id/666/600/400" alt="Orman" style="width:100%;max-width:300px">
-                            
-                <div id="myModal" class="modal">
-                     <span class="close">&times;</span>
-                     <img class="modal-content" id="img01">
-                      <div id="caption">Orman</div>
-                </div>
+    <div class="container text-align">
+        <div class="row d-flex">
 
+            <div class="col my-2">
+                <img src="https://picsum.photos/id/666/600/400" alt="Orman" class="galeri-img" style="width:100%;max-width:300px">
             </div>
-            <div class="col" style="padding:0;">
-                <img id="myImg" src="https://picsum.photos/id/666/600/400" alt="Orman" style="width:100%;max-width:300px">
-                            
-                <div id="myModal" class="modal">
-                     <span class="close">&times;</span>
-                     <img class="modal-content" id="img01">
-                      <div id="caption">Orman</div>
-                </div>
 
+            <div class="col my-2">
+                <img src="https://picsum.photos/id/676/600/400" alt="Dað" class="galeri-img" style="width:100%;max-width:300px">
             </div>
-            <div class="col" style="padding:0;">
-                <img id="myImg" src="https://picsum.photos/id/666/600/400" alt="Orman" style="width:100%;max-width:300px">
-                            
-                <div id="myModal" class="modal">
-                     <span class="close">&times;</span>
-                     <img class="modal-content" id="img01">
-                      <div id="caption">Orman</div>
-                </div>
 
+            <div class="col my-2">
+                <img src="https://picsum.photos/id/606/600/400" alt="Deniz" class="galeri-img" style="width:100%;max-width:300px">
             </div>
-            <div class="col" style="padding:0;">
-                <img id="myImg" src="https://picsum.photos/id/666/600/400" alt="Orman" style="width:100%;max-width:300px">
-                            
-                <div id="myModal" class="modal">
-                     <span class="close">&times;</span>
-                     <img class="modal-content" id="img01">
-                      <div id="caption">Orman</div>
-                </div>
 
+            <div class="col my-2">
+                <img src="https://picsum.photos/id/696/600/400" alt="Çiçek" class="galeri-img" style="width:100%;max-width:300px">
             </div>
-            
-           
+
         </div>
+        <div class="row d-flex">
 
+            <div class="col mb-2">
+                <img src="https://picsum.photos/id/500/600/400" alt="Kule" class="galeri-img" style="width:100%;max-width:300px">
+            </div>
+
+            <div class="col mb-2">
+                <img src="https://picsum.photos/id/501/600/400" alt="Deniz Tatili" class="galeri-img" style="width:100%;max-width:300px">
+            </div>
+
+            <div class="col mb-2">
+                <img src="https://picsum.photos/id/502/600/400" alt="Ormanlýk" class="galeri-img" style="width:100%;max-width:300px">
+            </div>
+
+            <div class="col mb-2">
+                <img src="https://picsum.photos/id/503/600/400" alt="Köprü" class="galeri-img" style="width:100%;max-width:300px">
+            </div>
+
+        </div>
+        <div class="row d-flex">
+
+            <div class="col mb-2">
+                <img src="https://picsum.photos/id/800/600/400" alt="Müze" class="galeri-img" style="width:100%;max-width:300px">
+            </div>
+
+            <div class="col mb-2">
+                <img src="https://picsum.photos/id/806/600/400" alt="Dað" class="galeri-img" style="width:100%;max-width:300px">
+            </div>
+
+            <div class="col mb-2">
+                <img src="https://picsum.photos/id/802/600/400" alt="Ders" class="galeri-img" style="width:100%;max-width:300px">
+            </div>
+
+            <div class="col mb-2">
+                <img src="https://picsum.photos/id/803/600/400" alt="Çiçek" class="galeri-img" style="width:100%;max-width:300px">
+            </div>
+
+        </div>
     </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+   
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modal-img">
+        <div id="caption"></div>
+    </div>
 
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
-   
+
     <script>
-        // Get the modal
         var modal = document.getElementById("myModal");
-
-        // Get the image and insert it inside the modal - use its "alt" text as a caption
-        var img = document.getElementById("myImg");
-        var modalImg = document.getElementById("img01");
+        var modalImg = document.getElementById("modal-img");
         var captionText = document.getElementById("caption");
-        img.onclick = function () {
-            modal.style.display = "block";
-            modalImg.src = this.src;
-            captionText.innerHTML = this.alt;
+        var closeBtn = document.getElementsByClassName("close")[0];
+    
+        /*var images = document.querySelectorAll(".galeri-img");*/
+        //images.forEach(function (img) {
+        //    img.addEventListener("click", function () {
+        //        modal.style.display = "block";
+        //        modalImg.src = this.src;
+        //        captionText.innerHTML = this.alt;
+        //    });
+        //});
+
+        var images = document.getElementsByClassName("galeri-img");
+        for (var i = 0; i < images.length; i++) {
+            var img = images[i];
+            img.addEventListener("click", function () {
+                    modal.style.display = "block";
+                    modalImg.src = this.src;
+                    captionText.innerHTML = this.alt;
+                });
+
         }
-
-        // Get the <span> element that closes the modal
-        var span = document.getElementsByClassName("close")[0];
-
-        // When the user clicks on <span> (x), close the modal
-        span.onclick = function () {
+       
+        closeBtn.onclick = function () {
             modal.style.display = "none";
-        }
+        };
+
+
     </script>
+
+       
 
 </body>
 </html>
